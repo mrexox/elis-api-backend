@@ -1,0 +1,10 @@
+{
+  "post": {
+    "name": "Few Post #)))",
+    "permalink": "new-post-blahblah",
+    "image_id": 2,
+    "tags": [
+			{	"tag_name":"#9"	}
+    ]
+  }
+}

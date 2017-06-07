@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>development.log - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/darkfish.js"></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="file">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="project-metadata">
+    <div id="fileindex-section" class="nav-section">
+  <h3>Pages</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Gemfile.html">Gemfile</a>
+  
+    <li><a href="../Gemfile_lock.html">Gemfile.lock</a>
+  
+    <li><a href="../README_md.html">README</a>
+  
+    <li><a href="../Rakefile.html">Rakefile</a>
+  
+    <li><a href="../app/controllers/admin/#posts_controller_rb#.html">#posts_controller.rb#</a>
+  
+    <li><a href="../app/controllers/admin/posts_controller_rb~.html">posts_controller.rb~</a>
+  
+    <li><a href="../app/controllers/public_controller_rb~.html">public_controller.rb~</a>
+  
+    <li><a href="../app/models/#portfolio_image_rb#.html">#portfolio_image.rb#</a>
+  
+    <li><a href="../bin/curl.html">curl</a>
+  
+    <li><a href="../bin/json/post_json.html">post.json</a>
+  
+    <li><a href="../config_ru.html">config.ru</a>
+  
+    <li><a href="../log/development_log.html">development.log</a>
+  
+    <li><a href="../public/robots_txt.html">robots</a>
+  
+    <li><a href="../tmp/restart_txt.html">restart</a>
+  
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-label="Page log/development.log">
+
+<pre>[1m[35m (126.2ms)[0m  [1m[35mCREATE TABLE &quot;schema_migrations&quot; (&quot;version&quot; varchar NOT NULL PRIMARY KEY)[0m
+[1m[35m (272.0ms)[0m  [1m[35mCREATE TABLE &quot;ar_internal_metadata&quot; (&quot;key&quot; varchar NOT NULL PRIMARY KEY, &quot;value&quot; varchar, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>Migrating to <a href="../CreateAdminUsers.html">CreateAdminUsers</a>
+(20170421055928)</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE &quot;admin_users&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;login&quot; varchar NOT NULL, &quot;password_digest&quot; varchar, &quot;brief&quot; text, &quot;avatar&quot; varchar)[0m
+[1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES (?)[0m  [[&quot;version&quot;, &quot;20170421055928&quot;]]
+[1m[35m (100.6ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, :environment], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO &quot;ar_internal_metadata&quot; (&quot;key&quot;, &quot;value&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?)[0m  [[&quot;key&quot;, &quot;environment&quot;], [&quot;value&quot;, &quot;development&quot;], [&quot;created_at&quot;, 2017-04-21 06:03:05 UTC], [&quot;updated_at&quot;, 2017-04-21 06:03:05 UTC]]
+[1m[35m (94.5ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>Migrating to <a href="../CreateAdminUsers.html">CreateAdminUsers</a>
+(20170421055928)</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (2.1ms)[0m  [1m[35mDROP TABLE &quot;admin_users&quot;[0m
+[1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM &quot;schema_migrations&quot; WHERE &quot;schema_migrations&quot;.&quot;version&quot; = ?[0m  [[&quot;version&quot;, &quot;20170421055928&quot;]]
+[1m[35m (837.7ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>Migrating to <a href="../CreateAdminUsers.html">CreateAdminUsers</a>
+(20170421055928)</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE &quot;admin_users&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;login&quot; varchar NOT NULL, &quot;password_digest&quot; varchar, &quot;brief&quot; text, &quot;avatar&quot; varchar)[0m
+[1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES (?)[0m  [[&quot;version&quot;, &quot;20170421055928&quot;]]
+[1m[35m (106.1ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, :environment], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>Migrating to <a href="../CreateSlides.html">CreateSlides</a>
+(20170421060640)</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE &quot;slides&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;text&quot; varchar, &quot;url&quot; varchar, &quot;image&quot; varchar NOT NULL, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES (?)[0m  [[&quot;version&quot;, &quot;20170421060640&quot;]]
+[1m[35m (127.9ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, :environment], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>Migrating to <a
+href="../CreatePortfolioImages.html">CreatePortfolioImages</a>
+(20170421060805)</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>Migrating to <a
+href="../CreatePortfolioImages.html">CreatePortfolioImages</a>
+(20170421060805)</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>Migrating to <a
+href="../CreatePortfolioImages.html">CreatePortfolioImages</a>
+(20170421060805)</p>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE &quot;portfolio_images&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;image&quot; varchar NOT NULL, &quot;description&quot; text DEFAULT &#39;&#39;, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES (?)[0m  [[&quot;version&quot;, &quot;20170421060805&quot;]]
+[1m[35m (103.6ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, :environment], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>Migrating to <a href="../CreateMessages.html">CreateMessages</a>
+(20170421061608)</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE &quot;messages&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;name&quot; varchar NOT NULL, &quot;theme&quot; varchar, &quot;email&quot; varchar, &quot;phone_number&quot; varchar, &quot;text&quot; text NOT NULL, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES (?)[0m  [[&quot;version&quot;, &quot;20170421061608&quot;]]
+[1m[35m (113.1ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, :environment], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>Migrating to <a href="../CreatePosts.html">CreatePosts</a> (20170421061831)</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE &quot;posts&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;name&quot; varchar NOT NULL, &quot;text&quot; text NOT NULL, &quot;permalink&quot; varchar NOT NULL, &quot;images&quot; varchar, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES (?)[0m  [[&quot;version&quot;, &quot;20170421061831&quot;]]
+[1m[35m (400.4ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, :environment], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>Migrating to <a href="../CreateLikes.html">CreateLikes</a> (20170421062016)</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE &quot;likes&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;user_ip&quot; varchar NOT NULL, &quot;post_id&quot; integer, &quot;created_at&quot; datetime NOT NULL, &quot;updated_at&quot; datetime NOT NULL)[0m
+[1m[35m (0.3ms)[0m  [1m[34mselect sqlite_version(*)[0m
+[1m[35m (0.3ms)[0m  [1m[35mCREATE  INDEX &quot;index_likes_on_post_id&quot; ON &quot;likes&quot; (&quot;post_id&quot;)[0m
+[1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES (?)[0m  [[&quot;version&quot;, &quot;20170421062016&quot;]]
+[1m[35m (84.6ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, :environment], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+          FROM sqlite_master
+          WHERE name=&#39;index_likes_on_post_id&#39; AND type=&#39;index&#39;
+          UNION ALL
+          SELECT sql
+          FROM sqlite_temp_master
+          WHERE name=&#39;index_likes_on_post_id&#39; AND type=&#39;index&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>Migrating to <a href="../CreateTags.html">CreateTags</a> (20170421062155)</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE &quot;tags&quot; (&quot;id&quot; INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, &quot;tag_name&quot; varchar NOT NULL)[0m
+[1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES (?)[0m  [[&quot;version&quot;, &quot;20170421062155&quot;]]
+[1m[35m (156.0ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, :environment], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+          FROM sqlite_master
+          WHERE name=&#39;index_likes_on_post_id&#39; AND type=&#39;index&#39;
+          UNION ALL
+          SELECT sql
+          FROM sqlite_temp_master
+          WHERE name=&#39;index_likes_on_post_id&#39; AND type=&#39;index&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>Migrating to <a href="../CreatePostsTagsJoin.html">CreatePostsTagsJoin</a>
+(20170421062619)</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>Migrating to <a href="../CreatePostsTagsJoin.html">CreatePostsTagsJoin</a>
+(20170421062619)</p>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE &quot;posts_tags&quot; (&quot;post_id&quot; integer, &quot;tag_id&quot; integer)[0m
+[1m[35m (0.2ms)[0m  [1m[34mselect sqlite_version(*)[0m
+[1m[35m (0.4ms)[0m  [1m[35mCREATE  INDEX &quot;index_posts_tags_on_post_id_and_tag_id&quot; ON &quot;posts_tags&quot; (&quot;post_id&quot;, &quot;tag_id&quot;)[0m
+[1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO &quot;schema_migrations&quot; (&quot;version&quot;) VALUES (?)[0m  [[&quot;version&quot;, &quot;20170421062619&quot;]]
+[1m[35m (587.0ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  &quot;ar_internal_metadata&quot;.* FROM &quot;ar_internal_metadata&quot; WHERE &quot;ar_internal_metadata&quot;.&quot;key&quot; = ? LIMIT ?[0m  [[&quot;key&quot;, :environment], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m
+[1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+          FROM sqlite_master
+          WHERE name=&#39;index_likes_on_post_id&#39; AND type=&#39;index&#39;
+          UNION ALL
+          SELECT sql
+          FROM sqlite_temp_master
+          WHERE name=&#39;index_likes_on_post_id&#39; AND type=&#39;index&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.2ms)[0m  [1m[34m            SELECT sql
+          FROM sqlite_master
+          WHERE name=&#39;index_posts_tags_on_post_id_and_tag_id&#39; AND type=&#39;index&#39;
+          UNION ALL
+          SELECT sql
+          FROM sqlite_temp_master
+          WHERE name=&#39;index_posts_tags_on_post_id_and_tag_id&#39; AND type=&#39;index&#39;</pre>
+
+<p>[0m</p>
+
+<pre>[1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mAdminUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;admin_users&quot; WHERE &quot;admin_users&quot;.&quot;login&quot; = ? LIMIT ?[0m  [[&quot;login&quot;, &quot;admin&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO &quot;admin_users&quot; (&quot;login&quot;, &quot;password_digest&quot;, &quot;brief&quot;) VALUES (?, ?, ?)[0m  [[&quot;login&quot;, &quot;admin&quot;], [&quot;password_digest&quot;, &quot;$2a$10$A9LifsSJo1Vn7W8Mm7rNhueHQ0QEIYJIA1zinL5h/G.ZaQL0vhFpK&quot;], [&quot;brief&quot;, &quot;I am ian&quot;]]
+[1m[35m (62.7ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mAdminUser Load (1.6ms)[0m  [1m[34mSELECT &quot;admin_users&quot;.* FROM &quot;admin_users&quot;[0m</pre>
+
+<p>Started GET “/home” for 127.0.0.1 at 2017-04-23 08:56:11 +0300</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>SyntaxError
+(/home/ian/workspace/elis-api/elis-backend/app/controllers/public_controller.rb:5:
+syntax error, unexpected &#39;:&#39;, expecting &#39;}&#39;</p>
+
+<pre>render { posts: @posts, portfolio: @portfolio }, status: 200
+               ^):</pre>
+
+<p>app/controllers/public_controller.rb:5: syntax error, unexpected
+&#39;:&#39;, expecting &#39;}&#39; Started GET “/home” for 127.0.0.1 at
+2017-04-23 08:57:26 +0300 Processing by <a
+href="../PublicController.html#method-i-home">PublicController#home</a> as
+*</p>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>[1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  “posts”.* FROM “posts”
+ORDER BY created_at DESC LIMIT ?[0m  [[“LIMIT”, 4]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mPortfolioImage Load (0.4ms)[0m  [1m[34mSELECT 
+“portfolio_images”.* FROM “portfolio_images” ORDER BY created_at DESC LIMIT
+?[0m  [[“LIMIT”, 3]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>Rendered ActiveModel::Serializer::Null with Hash (11.69ms)</p>
+</dd></dl>
+
+<p>Completed 200 OK in 148ms (Views: 32.3ms | ActiveRecord: 2.7ms)</p>
+
+<pre>[1m[36mPortfolioImage Load (4.5ms)[0m  [1m[34mSELECT &quot;portfolio_images&quot;.* FROM &quot;portfolio_images&quot;[0m
+[1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m
+[1m[36mPortfolioImage Load (0.5ms)[0m  [1m[34mSELECT  &quot;portfolio_images&quot;.* FROM &quot;portfolio_images&quot; ORDER BY created_at DESC LIMIT ?[0m  [[&quot;LIMIT&quot;, 3]]</pre>
+
+<p>Started GET “/home” for 127.0.0.1 at 2017-04-23 09:01:51 +0300 Processing
+by <a
+href="../PublicController.html#method-i-home">PublicController#home</a> as 
+*</p>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>[1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  “posts”.* FROM “posts”
+ORDER BY created_at DESC LIMIT ?[0m  [[“LIMIT”, 4]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mPortfolioImage Load (0.6ms)[0m  [1m[34mSELECT 
+“portfolio_images”.* FROM “portfolio_images” ORDER BY created_at DESC LIMIT
+?[0m  [[“LIMIT”, 3]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>Rendered ActiveModel::Serializer::Null with Hash (5.44ms)</p>
+</dd></dl>
+
+<p>Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 1.2ms)</p>
+
+<p>Started GET “/home” for 127.0.0.1 at 2017-04-23 09:02:14 +0300</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>Processing by <a
+href="../PublicController.html#method-i-home">PublicController#home</a> as
+*</p>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>[1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  “posts”.* FROM “posts”
+ORDER BY created_at DESC LIMIT ?[0m  [[“LIMIT”, 4]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mPortfolioImage Load (0.4ms)[0m  [1m[34mSELECT 
+“portfolio_images”.* FROM “portfolio_images” ORDER BY created_at DESC LIMIT
+?[0m  [[“LIMIT”, 3]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>Rendered ActiveModel::Serializer::Null with Hash (9.83ms)</p>
+</dd></dl>
+
+<p>Completed 200 OK in 57ms (Views: 15.0ms | ActiveRecord: 2.0ms)</p>
+
+<p>Started GET “/home” for 127.0.0.1 at 2017-04-23 09:02:21 +0300 Processing
+by <a
+href="../PublicController.html#method-i-home">PublicController#home</a> as 
+*</p>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>[1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  “posts”.* FROM “posts”
+ORDER BY created_at DESC LIMIT ?[0m  [[“LIMIT”, 4]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mPortfolioImage Load (0.4ms)[0m  [1m[34mSELECT 
+“portfolio_images”.* FROM “portfolio_images” ORDER BY created_at DESC LIMIT
+?[0m  [[“LIMIT”, 3]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>Rendered ActiveModel::Serializer::Null with Hash (4.62ms)</p>
+</dd></dl>
+
+<p>Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 1.5ms)</p>
+
+<p>Started GET “/home” for 127.0.0.1 at 2017-04-23 09:07:07 +0300</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>Processing by <a
+href="../PublicController.html#method-i-home">PublicController#home</a> as
+<strong>/</strong></p>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>[1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  “posts”.* FROM “posts”
+ORDER BY created_at DESC LIMIT ?[0m  [[“LIMIT”, 4]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mPortfolioImage Load (0.5ms)[0m  [1m[34mSELECT 
+“portfolio_images”.* FROM “portfolio_images” ORDER BY created_at DESC LIMIT
+?[0m  [[“LIMIT”, 3]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>Rendered ActiveModel::Serializer::Null with Hash (9.8ms)</p>
+</dd></dl>
+
+<p>Completed 200 OK in 57ms (Views: 14.9ms | ActiveRecord: 2.1ms)</p>
+
+<p>Started GET “/home” for 127.0.0.1 at 2017-04-23 09:08:06 +0300 Processing
+by <a
+href="../PublicController.html#method-i-home">PublicController#home</a> as
+<strong>/</strong></p>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>[1m[36mPost Load (2.2ms)[0m  [1m[34mSELECT  “posts”.* FROM “posts”
+ORDER BY created_at DESC LIMIT ?[0m  [[“LIMIT”, 4]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mPortfolioImage Load (0.6ms)[0m  [1m[34mSELECT 
+“portfolio_images”.* FROM “portfolio_images” ORDER BY created_at DESC LIMIT
+?[0m  [[“LIMIT”, 3]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>Rendered ActiveModel::Serializer::Null with Hash (6.8ms)</p>
+</dd></dl>
+
+<p>Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 2.8ms)</p>
+
+<p>Started POST “/admin/posts” for 127.0.0.1 at 2017-04-23 09:18:29 +0300
+Error occurred while parsing request parameters. Contents:</p>
+
+<p>{       “post”: {               “name”:“NewPost #1”,           
+“text”:“&lt;p&gt;This is my first post&lt;/p&gt;”,         
+“permalink”:“new-post-1”,       }}</p>
+
+<p>ActionDispatch::ParamsParser::ParseError (822: unexpected token at &#39;{  
+“post”: {               “name”:“NewPost #1”,           
+“text”:“&lt;p&gt;This is my first post&lt;/p&gt;”,         
+“permalink”:“new-post-1”,       }}&#39;):</p>
+
+<p>actionpack (5.0.2) lib/action_dispatch/http/parameters.rb:88:in `rescue in
+parse_formatted_parameters&#39; actionpack (5.0.2)
+lib/action_dispatch/http/parameters.rb:82:in
+`parse_formatted_parameters&#39; actionpack (5.0.2)
+lib/action_dispatch/http/request.rb:354:in `block in POST&#39; rack (2.0.1)
+lib/rack/request.rb:57:in `fetch&#39; rack (2.0.1)
+lib/rack/request.rb:57:in `fetch_header&#39; actionpack (5.0.2)
+lib/action_dispatch/http/request.rb:353:in `POST&#39; actionpack (5.0.2)
+lib/action_controller/metal/params_wrapper.rb:282:in
+`_wrapper_enabled?&#39; actionpack (5.0.2)
+lib/action_controller/metal/params_wrapper.rb:231:in `process_action&#39;
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in
+`process_action&#39; actionpack (5.0.2)
+lib/abstract_controller/base.rb:126:in `process&#39; actionpack (5.0.2)
+lib/action_controller/metal.rb:190:in `dispatch&#39; actionpack (5.0.2)
+lib/action_controller/metal.rb:262:in `dispatch&#39; actionpack (5.0.2)
+lib/action_dispatch/routing/route_set.rb:50:in `dispatch&#39; actionpack
+(5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve&#39;
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in
+serve&#39; actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in
+`each&#39; actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in
+`serve&#39; actionpack (5.0.2)
+lib/action_dispatch/routing/route_set.rb:725:in `call&#39; rack (2.0.1)
+lib/rack/etag.rb:25:in `call&#39; rack (2.0.1)
+lib/rack/conditional_get.rb:38:in `call&#39; rack (2.0.1)
+lib/rack/head.rb:12:in `call&#39; activerecord (5.0.2)
+lib/active_record/migration.rb:553:in `call&#39; actionpack (5.0.2)
+lib/action_dispatch/middleware/callbacks.rb:38:in `block in call&#39;
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in
+`<em>run_callbacks</em>&#39; activesupport (5.0.2)
+lib/active_support/callbacks.rb:750:in `_run_call_callbacks&#39;
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in
+`run_callbacks&#39; actionpack (5.0.2)
+lib/action_dispatch/middleware/callbacks.rb:36:in `call&#39; actionpack
+(5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call&#39;
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in
+`call&#39; actionpack (5.0.2)
+lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call&#39;
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in
+`call&#39; railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app&#39;
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call&#39;
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in
+tagged&#39; activesupport (5.0.2)
+lib/active_support/tagged_logging.rb:26:in `tagged&#39; activesupport
+(5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged&#39; railties
+(5.0.2) lib/rails/rack/logger.rb:24:in `call&#39; actionpack (5.0.2)
+lib/action_dispatch/middleware/request_id.rb:24:in `call&#39; rack (2.0.1)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.0.2)
+lib/active_support/cache/strategy/local_cache_middleware.rb:28:in
+`call&#39; actionpack (5.0.2)
+lib/action_dispatch/middleware/executor.rb:12:in `call&#39; actionpack
+(5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call&#39; rack
+(2.0.1) lib/rack/sendfile.rb:111:in `call&#39; railties (5.0.2)
+lib/rails/engine.rb:522:in `call&#39; puma (3.8.2)
+lib/puma/configuration.rb:224:in `call&#39; puma (3.8.2)
+lib/puma/server.rb:600:in `handle_request&#39; puma (3.8.2)
+lib/puma/server.rb:435:in `process_client&#39; puma (3.8.2)
+lib/puma/server.rb:299:in `block in run&#39; puma (3.8.2)
+lib/puma/thread_pool.rb:120:in `block in spawn_thread&#39; Started POST
+“/admin/posts” for 127.0.0.1 at 2017-04-23 09:19:24 +0300 Processing by <a
+href="../Admin/PostsController.html#method-i-create">Admin::PostsController#create</a>
+as <strong>/</strong></p>
+
+<pre>Parameters: {&quot;post&quot;=&gt;{&quot;name&quot;=&gt;&quot;NewPost #1&quot;, &quot;text&quot;=&gt;&quot;&lt;p&gt;This is my first post&lt;/p&gt;&quot;, &quot;permalink&quot;=&gt;&quot;new-post-1&quot;}}</pre>
+
+<p>Unpermitted parameter: permalink</p>
+
+<pre>[1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mPost Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;permalink&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO &quot;posts&quot; (&quot;name&quot;, &quot;text&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?)[0m  [[&quot;name&quot;, &quot;NewPost #1&quot;], [&quot;text&quot;, &quot;&lt;p&gt;This is my first post&lt;/p&gt;&quot;], [&quot;created_at&quot;, 2017-04-23 06:19:25 UTC], [&quot;updated_at&quot;, 2017-04-23 06:19:25 UTC]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m</pre>
+
+<p>Completed 500 Internal Server Error in 650ms (ActiveRecord: 3.6ms)</p>
+
+<p>ActiveRecord::StatementInvalid (SQLite3::ConstraintException: NOT NULL
+constraint failed: posts.permalink: INSERT INTO “posts” (“name”, “text”,
+“created_at”, “updated_at”) VALUES (?, ?, ?, ?)):</p>
+
+<p>app/controllers/admin/posts_controller.rb:14:in `create&#39; Started POST
+“/admin/posts” for 127.0.0.1 at 2017-04-23 09:20:09 +0300 Processing by <a
+href="../Admin/PostsController.html#method-i-create">Admin::PostsController#create</a>
+as <strong>/</strong></p>
+
+<pre>Parameters: {&quot;post&quot;=&gt;{&quot;name&quot;=&gt;&quot;NewPost #1&quot;, &quot;text&quot;=&gt;&quot;&lt;p&gt;This is my first post&lt;/p&gt;&quot;, &quot;permalink&quot;=&gt;&quot;new-post-1&quot;}}
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mPost Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;permalink&quot; = ? LIMIT ?[0m  [[&quot;permalink&quot;, &quot;new-post-1&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO &quot;posts&quot; (&quot;name&quot;, &quot;text&quot;, &quot;permalink&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?)[0m  [[&quot;name&quot;, &quot;NewPost #1&quot;], [&quot;text&quot;, &quot;&lt;p&gt;This is my first post&lt;/p&gt;&quot;], [&quot;permalink&quot;, &quot;new-post-1&quot;], [&quot;created_at&quot;, 2017-04-23 06:20:09 UTC], [&quot;updated_at&quot;, 2017-04-23 06:20:09 UTC]]
+[1m[35m (403.0ms)[0m  [1m[36mcommit transaction[0m</pre>
+
+<p>Completed 500 Internal Server Error in 483ms (ActiveRecord: 407.5ms)</p>
+
+<p>NoMethodError (undefined method `has_and_belongs_to_many&#39; for
+PostSerializer:Class):</p>
+
+<p>app/serializers/post_serializer.rb:3:in `&lt;class:PostSerializer&gt;&#39;
+app/serializers/post_serializer.rb:1:in `&lt;top (required)&gt;&#39;
+app/controllers/admin/posts_controller.rb:15:in `create&#39; Started POST
+“/admin/posts” for 127.0.0.1 at 2017-04-23 09:20:31 +0300 Processing by <a
+href="../Admin/PostsController.html#method-i-create">Admin::PostsController#create</a>
+as <strong>/</strong></p>
+
+<pre>Parameters: {&quot;post&quot;=&gt;{&quot;name&quot;=&gt;&quot;NewPost #1&quot;, &quot;text&quot;=&gt;&quot;&lt;p&gt;This is my first post&lt;/p&gt;&quot;, &quot;permalink&quot;=&gt;&quot;new-post-1&quot;}}
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mPost Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;permalink&quot; = ? LIMIT ?[0m  [[&quot;permalink&quot;, &quot;new-post-1&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m</pre>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.28ms)</p>
+</dd></dl>
+
+<p>Completed 400 Bad Request in 642ms (Views: 8.2ms | ActiveRecord: 2.7ms)</p>
+
+<p>Started POST “/admin/posts” for 127.0.0.1 at 2017-04-23 09:20:59 +0300
+Processing by <a
+href="../Admin/PostsController.html#method-i-create">Admin::PostsController#create</a>
+as <strong>/</strong></p>
+
+<pre>Parameters: {&quot;post&quot;=&gt;{&quot;name&quot;=&gt;&quot;NewPost #2&quot;, &quot;text&quot;=&gt;&quot;&lt;p&gt;This is my secoond post&lt;/p&gt;&quot;, &quot;permalink&quot;=&gt;&quot;new-post-2&quot;}}
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mPost Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;permalink&quot; = ? LIMIT ?[0m  [[&quot;permalink&quot;, &quot;new-post-2&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO &quot;posts&quot; (&quot;name&quot;, &quot;text&quot;, &quot;permalink&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?)[0m  [[&quot;name&quot;, &quot;NewPost #2&quot;], [&quot;text&quot;, &quot;&lt;p&gt;This is my secoond post&lt;/p&gt;&quot;], [&quot;permalink&quot;, &quot;new-post-2&quot;], [&quot;created_at&quot;, 2017-04-23 06:20:59 UTC], [&quot;updated_at&quot;, 2017-04-23 06:20:59 UTC]]
+[1m[35m (93.2ms)[0m  [1m[36mcommit transaction[0m</pre>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>[1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT “tags”.* FROM “tags” INNER
+JOIN “posts_tags” ON “tags”.“id” = “posts_tags”.“tag_id” WHERE
+“posts_tags”.“post_id” = ?[0m  [[“post_id”, 2]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT “likes”.* FROM “likes”
+WHERE “likes”.“post_id” = ?[0m  [[“post_id”, 2]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>Rendered <a href="../PostSerializer.html">PostSerializer</a> with
+ActiveModelSerializers::Adapter::JsonApi (167.94ms)</p>
+</dd></dl>
+
+<p>Completed 201 Created in 335ms (Views: 229.8ms | ActiveRecord: 96.3ms)</p>
+
+<p>Started GET “/home” for 127.0.0.1 at 2017-04-23 09:21:16 +0300 Processing
+by <a
+href="../PublicController.html#method-i-home">PublicController#home</a> as
+<strong>/</strong></p>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>[1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT  “posts”.* FROM “posts”
+ORDER BY created_at DESC LIMIT ?[0m  [[“LIMIT”, 4]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mPortfolioImage Load (0.3ms)[0m  [1m[34mSELECT 
+“portfolio_images”.* FROM “portfolio_images” ORDER BY created_at DESC LIMIT
+?[0m  [[“LIMIT”, 3]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>Rendered ActiveModel::Serializer::Null with Hash (6.68ms)</p>
+</dd></dl>
+
+<p>Completed 200 OK in 13ms (Views: 7.6ms | ActiveRecord: 1.4ms)</p>
+
+<p>Started GET “/home” for 127.0.0.1 at 2017-04-23 09:22:29 +0300 Processing
+by <a
+href="../PublicController.html#method-i-home">PublicController#home</a> as
+<strong>/</strong></p>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>[1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  “posts”.* FROM “posts”
+ORDER BY created_at DESC LIMIT ?[0m  [[“LIMIT”, 4]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mPortfolioImage Load (0.5ms)[0m  [1m[34mSELECT 
+“portfolio_images”.* FROM “portfolio_images” ORDER BY created_at DESC LIMIT
+?[0m  [[“LIMIT”, 3]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>Rendered ActiveModel::Serializer::Null with Hash (5.57ms)</p>
+</dd></dl>
+
+<p>Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.9ms)</p>
+
+<p>Started POST “/admin/posts” for 127.0.0.1 at 2017-04-23 09:30:18 +0300
+Processing by <a
+href="../Admin/PostsController.html#method-i-create">Admin::PostsController#create</a>
+as <strong>/</strong></p>
+
+<pre>Parameters: {&quot;post&quot;=&gt;{&quot;name&quot;=&gt;&quot;NewPost #3&quot;, &quot;text&quot;=&gt;&quot;&lt;p&gt;This is my third post&lt;/p&gt;&quot;, &quot;permalink&quot;=&gt;&quot;new-post-3&quot;, &quot;tags&quot;=&gt;[{&quot;tag_name&quot;=&gt;&quot;#1&quot;}, {&quot;tag_name&quot;=&gt;&quot;first-post&quot;}, {&quot;tag_name&quot;=&gt;&quot;Yahooooe!&quot;}]}}</pre>
+
+<p>Unpermitted parameter: tags</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mPost Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;permalink&quot; = ? LIMIT ?[0m  [[&quot;permalink&quot;, &quot;new-post-3&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO &quot;posts&quot; (&quot;name&quot;, &quot;text&quot;, &quot;permalink&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?)[0m  [[&quot;name&quot;, &quot;NewPost #3&quot;], [&quot;text&quot;, &quot;&lt;p&gt;This is my third post&lt;/p&gt;&quot;], [&quot;permalink&quot;, &quot;new-post-3&quot;], [&quot;created_at&quot;, 2017-04-23 06:30:18 UTC], [&quot;updated_at&quot;, 2017-04-23 06:30:18 UTC]]
+[1m[35m (107.4ms)[0m  [1m[36mcommit transaction[0m</pre>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>[1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT “tags”.* FROM “tags” INNER
+JOIN “posts_tags” ON “tags”.“id” = “posts_tags”.“tag_id” WHERE
+“posts_tags”.“post_id” = ?[0m  [[“post_id”, 3]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT “likes”.* FROM “likes”
+WHERE “likes”.“post_id” = ?[0m  [[“post_id”, 3]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>Rendered <a href="../PostSerializer.html">PostSerializer</a> with
+ActiveModelSerializers::Adapter::JsonApi (47.01ms)</p>
+</dd></dl>
+
+<p>Completed 201 Created in 191ms (Views: 48.7ms | ActiveRecord: 114.0ms)</p>
+
+<p>Started POST “/admin/posts” for 127.0.0.1 at 2017-04-23 09:31:41 +0300
+Processing by <a
+href="../Admin/PostsController.html#method-i-create">Admin::PostsController#create</a>
+as <strong>/</strong></p>
+
+<pre>Parameters: {&quot;post&quot;=&gt;{&quot;name&quot;=&gt;&quot;NewPost #4&quot;, &quot;text&quot;=&gt;&quot;&lt;p&gt;This is my fourth post&lt;/p&gt;&quot;, &quot;permalink&quot;=&gt;&quot;new-post-4&quot;, &quot;tags&quot;=&gt;[{&quot;tag_name&quot;=&gt;&quot;#1&quot;}, {&quot;tag_name&quot;=&gt;&quot;first-post&quot;}, {&quot;tag_name&quot;=&gt;&quot;Yahooooe!&quot;}]}}</pre>
+
+<p>Unpermitted parameter: tags Unpermitted parameter: tags</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mTag Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[36mPost Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;permalink&quot; = ? LIMIT ?[0m  [[&quot;permalink&quot;, &quot;new-post-4&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO &quot;posts&quot; (&quot;name&quot;, &quot;text&quot;, &quot;permalink&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?)[0m  [[&quot;name&quot;, &quot;NewPost #4&quot;], [&quot;text&quot;, &quot;&lt;p&gt;This is my fourth post&lt;/p&gt;&quot;], [&quot;permalink&quot;, &quot;new-post-4&quot;], [&quot;created_at&quot;, 2017-04-23 06:31:41 UTC], [&quot;updated_at&quot;, 2017-04-23 06:31:41 UTC]]
+[1m[36mTag Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO &quot;tags&quot; DEFAULT VALUES[0m
+[1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m</pre>
+
+<p>Completed 500 Internal Server Error in 70ms (ActiveRecord: 5.6ms)</p>
+
+<p>ActiveRecord::StatementInvalid (SQLite3::ConstraintException: NOT NULL
+constraint failed: tags.tag_name: INSERT INTO “tags” DEFAULT VALUES):</p>
+
+<p>app/controllers/admin/posts_controller.rb:15:in `create&#39; Started POST
+“/admin/posts” for 127.0.0.1 at 2017-04-23 09:32:18 +0300 Processing by <a
+href="../Admin/PostsController.html#method-i-create">Admin::PostsController#create</a>
+as <strong>/</strong></p>
+
+<pre>Parameters: {&quot;post&quot;=&gt;{&quot;name&quot;=&gt;&quot;NewPost #4&quot;, &quot;text&quot;=&gt;&quot;&lt;p&gt;This is my fourth post&lt;/p&gt;&quot;, &quot;permalink&quot;=&gt;&quot;new-post-4&quot;, &quot;tags&quot;=&gt;[{&quot;tag_name&quot;=&gt;&quot;#1&quot;}, {&quot;tag_name&quot;=&gt;&quot;first-post&quot;}, {&quot;tag_name&quot;=&gt;&quot;Yahooooe!&quot;}]}}</pre>
+
+<p>Unpermitted parameter: tags Unpermitted parameter: tags Unpermitted
+parameter: tags</p>
+
+<pre>[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mTag Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[36mPost Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;permalink&quot; = ? LIMIT ?[0m  [[&quot;permalink&quot;, &quot;new-post-4&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35mSQL (2.9ms)[0m  [1m[32mINSERT INTO &quot;posts&quot; (&quot;name&quot;, &quot;text&quot;, &quot;permalink&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?)[0m  [[&quot;name&quot;, &quot;NewPost #4&quot;], [&quot;text&quot;, &quot;&lt;p&gt;This is my fourth post&lt;/p&gt;&quot;], [&quot;permalink&quot;, &quot;new-post-4&quot;], [&quot;created_at&quot;, 2017-04-23 06:32:18 UTC], [&quot;updated_at&quot;, 2017-04-23 06:32:18 UTC]]
+[1m[36mTag Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; IS NULL LIMIT ?[0m  [[&quot;LIMIT&quot;, 1]]
+[1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO &quot;tags&quot; DEFAULT VALUES[0m
+[1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m</pre>
+
+<p>Completed 500 Internal Server Error in 78ms (ActiveRecord: 8.8ms)</p>
+
+<p>ActiveRecord::StatementInvalid (SQLite3::ConstraintException: NOT NULL
+constraint failed: tags.tag_name: INSERT INTO “tags” DEFAULT VALUES):</p>
+
+<p>app/controllers/admin/posts_controller.rb:16:in `create&#39; Started POST
+“/admin/posts” for 127.0.0.1 at 2017-04-23 09:47:00 +0300 Processing by <a
+href="../Admin/PostsController.html#method-i-create">Admin::PostsController#create</a>
+as <strong>/</strong></p>
+
+<pre>Parameters: {&quot;post&quot;=&gt;{&quot;name&quot;=&gt;&quot;NewPost #4&quot;, &quot;text&quot;=&gt;&quot;&lt;p&gt;This is my fourth post&lt;/p&gt;&quot;, &quot;permalink&quot;=&gt;&quot;new-post-4&quot;, &quot;tags&quot;=&gt;[{&quot;tag_name&quot;=&gt;&quot;#1&quot;}, {&quot;tag_name&quot;=&gt;&quot;first-post&quot;}, {&quot;tag_name&quot;=&gt;&quot;Yahooooe!&quot;}]}}</pre>
+
+<p>Unpermitted parameter: tags Unpermitted parameter: tags Completed 500
+Internal Server Error in 46ms (ActiveRecord: 2.7ms)</p>
+
+<p>NoMethodError (undefined method `tag_name&#39; for
+#&lt;ActionController::Parameters:0x007fd8fc136e38&gt;):</p>
+
+<p>app/controllers/admin/posts_controller.rb:33:in `block in parse_tags&#39;
+app/controllers/admin/posts_controller.rb:32:in `each&#39;
+app/controllers/admin/posts_controller.rb:32:in `parse_tags&#39;
+app/controllers/admin/posts_controller.rb:15:in `create&#39; Started POST
+“/admin/posts” for 127.0.0.1 at 2017-04-23 09:47:32 +0300 Processing by <a
+href="../Admin/PostsController.html#method-i-create">Admin::PostsController#create</a>
+as <strong>/</strong></p>
+
+<pre>Parameters: {&quot;post&quot;=&gt;{&quot;name&quot;=&gt;&quot;NewPost #4&quot;, &quot;text&quot;=&gt;&quot;&lt;p&gt;This is my fourth post&lt;/p&gt;&quot;, &quot;permalink&quot;=&gt;&quot;new-post-4&quot;, &quot;tags&quot;=&gt;[{&quot;tag_name&quot;=&gt;&quot;#1&quot;}, {&quot;tag_name&quot;=&gt;&quot;first-post&quot;}, {&quot;tag_name&quot;=&gt;&quot;Yahooooe!&quot;}]}}</pre>
+
+<p>Unpermitted parameter: tags Unpermitted parameter: tags</p>
+
+<pre>[1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT &quot;tags&quot;.* FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ?[0m  [[&quot;tag_name&quot;, &quot;#1&quot;]]
+[1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT &quot;tags&quot;.* FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ?[0m  [[&quot;tag_name&quot;, &quot;first-post&quot;]]
+[1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT &quot;tags&quot;.* FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ?[0m  [[&quot;tag_name&quot;, &quot;Yahooooe!&quot;]]
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mPost Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;permalink&quot; = ? LIMIT ?[0m  [[&quot;permalink&quot;, &quot;new-post-4&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO &quot;posts&quot; (&quot;name&quot;, &quot;text&quot;, &quot;permalink&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?)[0m  [[&quot;name&quot;, &quot;NewPost #4&quot;], [&quot;text&quot;, &quot;&lt;p&gt;This is my fourth post&lt;/p&gt;&quot;], [&quot;permalink&quot;, &quot;new-post-4&quot;], [&quot;created_at&quot;, 2017-04-23 06:47:32 UTC], [&quot;updated_at&quot;, 2017-04-23 06:47:32 UTC]]
+[1m[35m (106.3ms)[0m  [1m[36mcommit transaction[0m</pre>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>[1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT “likes”.* FROM “likes”
+WHERE “likes”.“post_id” = ?[0m  [[“post_id”, 4]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>Rendered <a href="../PostSerializer.html">PostSerializer</a> with
+ActiveModelSerializers::Adapter::JsonApi (23.47ms)</p>
+</dd></dl>
+
+<p>Completed 201 Created in 195ms (Views: 27.2ms | ActiveRecord: 111.8ms)</p>
+
+<pre>[1m[36mTag Load (2.8ms)[0m  [1m[34mSELECT &quot;tags&quot;.* FROM &quot;tags&quot;[0m
+[1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot;[0m</pre>
+
+<p>Started POST “/admin/posts” for 127.0.0.1 at 2017-04-23 09:49:55 +0300
+Processing by <a
+href="../Admin/PostsController.html#method-i-create">Admin::PostsController#create</a>
+as <strong>/</strong></p>
+
+<pre>Parameters: {&quot;post&quot;=&gt;{&quot;name&quot;=&gt;&quot;NewPost #4&quot;, &quot;text&quot;=&gt;&quot;&lt;p&gt;This is my fourth post&lt;/p&gt;&quot;, &quot;permalink&quot;=&gt;&quot;new-post-4&quot;, &quot;tags&quot;=&gt;[{&quot;tag_name&quot;=&gt;&quot;#1&quot;}, {&quot;tag_name&quot;=&gt;&quot;first-post&quot;}, {&quot;tag_name&quot;=&gt;&quot;Yahooooe!&quot;}]}}</pre>
+
+<p>Unpermitted parameter: tags Unpermitted parameter: tags Completed 500
+Internal Server Error in 142ms (ActiveRecord: 2.9ms)</p>
+
+<p>NoMethodError (undefined method `pust&#39; for
+#&lt;Admin::PostsController:0x00000003a4fd50&gt; Did you mean?  puts):</p>
+
+<p>app/controllers/admin/posts_controller.rb:34:in `block in parse_tags&#39;
+app/controllers/admin/posts_controller.rb:32:in `each&#39;
+app/controllers/admin/posts_controller.rb:32:in `parse_tags&#39;
+app/controllers/admin/posts_controller.rb:15:in `create&#39; Started POST
+“/admin/posts” for 127.0.0.1 at 2017-04-23 09:50:10 +0300 Processing by <a
+href="../Admin/PostsController.html#method-i-create">Admin::PostsController#create</a>
+as <strong>/</strong></p>
+
+<pre>Parameters: {&quot;post&quot;=&gt;{&quot;name&quot;=&gt;&quot;NewPost #4&quot;, &quot;text&quot;=&gt;&quot;&lt;p&gt;This is my fourth post&lt;/p&gt;&quot;, &quot;permalink&quot;=&gt;&quot;new-post-4&quot;, &quot;tags&quot;=&gt;[{&quot;tag_name&quot;=&gt;&quot;#1&quot;}, {&quot;tag_name&quot;=&gt;&quot;first-post&quot;}, {&quot;tag_name&quot;=&gt;&quot;Yahooooe!&quot;}]}}</pre>
+
+<p>Unpermitted parameter: tags Unpermitted parameter: tags</p>
+
+<pre>[1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT &quot;tags&quot;.* FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ?[0m  [[&quot;tag_name&quot;, &quot;#1&quot;]]
+[1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT &quot;tags&quot;.* FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ?[0m  [[&quot;tag_name&quot;, &quot;first-post&quot;]]
+[1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT &quot;tags&quot;.* FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ?[0m  [[&quot;tag_name&quot;, &quot;Yahooooe!&quot;]]
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mPost Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;permalink&quot; = ? LIMIT ?[0m  [[&quot;permalink&quot;, &quot;new-post-4&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m</pre>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.23ms)</p>
+</dd></dl>
+
+<p>Completed 400 Bad Request in 71ms (Views: 9.5ms | ActiveRecord: 4.1ms)</p>
+
+<p>Started POST “/admin/posts” for 127.0.0.1 at 2017-04-23 09:50:27 +0300
+Processing by <a
+href="../Admin/PostsController.html#method-i-create">Admin::PostsController#create</a>
+as <strong>/</strong></p>
+
+<pre>Parameters: {&quot;post&quot;=&gt;{&quot;name&quot;=&gt;&quot;NewPost #4&quot;, &quot;text&quot;=&gt;&quot;&lt;p&gt;This is my fourth post&lt;/p&gt;&quot;, &quot;permalink&quot;=&gt;&quot;new-post-4&quot;, &quot;tags&quot;=&gt;[{&quot;tag_name&quot;=&gt;&quot;#1&quot;}, {&quot;tag_name&quot;=&gt;&quot;first-post&quot;}, {&quot;tag_name&quot;=&gt;&quot;Yahooooe!&quot;}]}}</pre>
+
+<p>Unpermitted parameter: tags Unpermitted parameter: tags</p>
+
+<pre>[1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT &quot;tags&quot;.* FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ?[0m  [[&quot;tag_name&quot;, &quot;#1&quot;]]
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mTag Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ? LIMIT ?[0m  [[&quot;tag_name&quot;, &quot;#1&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO &quot;tags&quot; (&quot;tag_name&quot;) VALUES (?)[0m  [[&quot;tag_name&quot;, &quot;#1&quot;]]
+[1m[35m (108.5ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT &quot;tags&quot;.* FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ?[0m  [[&quot;tag_name&quot;, &quot;first-post&quot;]]
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mTag Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ? LIMIT ?[0m  [[&quot;tag_name&quot;, &quot;first-post&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO &quot;tags&quot; (&quot;tag_name&quot;) VALUES (?)[0m  [[&quot;tag_name&quot;, &quot;first-post&quot;]]
+[1m[35m (99.0ms)[0m  [1m[36mcommit transaction[0m
+[1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT &quot;tags&quot;.* FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ?[0m  [[&quot;tag_name&quot;, &quot;Yahooooe!&quot;]]
+[1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mTag Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ? LIMIT ?[0m  [[&quot;tag_name&quot;, &quot;Yahooooe!&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO &quot;tags&quot; (&quot;tag_name&quot;) VALUES (?)[0m  [[&quot;tag_name&quot;, &quot;Yahooooe!&quot;]]
+[1m[35m (75.2ms)[0m  [1m[36mcommit transaction[0m
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mTag Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ? AND (&quot;tags&quot;.&quot;id&quot; != ?) LIMIT ?[0m  [[&quot;tag_name&quot;, &quot;#1&quot;], [&quot;id&quot;, 1], [&quot;LIMIT&quot;, 1]]
+[1m[36mTag Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ? AND (&quot;tags&quot;.&quot;id&quot; != ?) LIMIT ?[0m  [[&quot;tag_name&quot;, &quot;first-post&quot;], [&quot;id&quot;, 2], [&quot;LIMIT&quot;, 1]]
+[1m[36mTag Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ? AND (&quot;tags&quot;.&quot;id&quot; != ?) LIMIT ?[0m  [[&quot;tag_name&quot;, &quot;Yahooooe!&quot;], [&quot;id&quot;, 3], [&quot;LIMIT&quot;, 1]]
+[1m[36mPost Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;permalink&quot; = ? LIMIT ?[0m  [[&quot;permalink&quot;, &quot;new-post-4&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m</pre>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (0.18ms)</p>
+</dd></dl>
+
+<p>Completed 400 Bad Request in 447ms (Views: 11.3ms | ActiveRecord: 296.7ms)</p>
+
+<p>Started POST “/admin/posts” for 127.0.0.1 at 2017-04-23 09:50:54 +0300
+Processing by <a
+href="../Admin/PostsController.html#method-i-create">Admin::PostsController#create</a>
+as <strong>/</strong></p>
+
+<pre>Parameters: {&quot;post&quot;=&gt;{&quot;name&quot;=&gt;&quot;NewPost #5&quot;, &quot;text&quot;=&gt;&quot;&lt;p&gt;This is my fifth post&lt;/p&gt;&quot;, &quot;permalink&quot;=&gt;&quot;new-post-5&quot;, &quot;tags&quot;=&gt;[{&quot;tag_name&quot;=&gt;&quot;#1&quot;}, {&quot;tag_name&quot;=&gt;&quot;first-post&quot;}, {&quot;tag_name&quot;=&gt;&quot;Yahooooe!&quot;}]}}</pre>
+
+<p>Unpermitted parameter: tags Unpermitted parameter: tags</p>
+
+<pre>[1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT &quot;tags&quot;.* FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ?[0m  [[&quot;tag_name&quot;, &quot;#1&quot;]]
+[1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT &quot;tags&quot;.* FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ?[0m  [[&quot;tag_name&quot;, &quot;first-post&quot;]]
+[1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT &quot;tags&quot;.* FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ?[0m  [[&quot;tag_name&quot;, &quot;Yahooooe!&quot;]]
+[1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[1m[36mTag Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ? AND (&quot;tags&quot;.&quot;id&quot; != ?) LIMIT ?[0m  [[&quot;tag_name&quot;, &quot;#1&quot;], [&quot;id&quot;, 1], [&quot;LIMIT&quot;, 1]]
+[1m[36mTag Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ? AND (&quot;tags&quot;.&quot;id&quot; != ?) LIMIT ?[0m  [[&quot;tag_name&quot;, &quot;first-post&quot;], [&quot;id&quot;, 2], [&quot;LIMIT&quot;, 1]]
+[1m[36mTag Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;tags&quot; WHERE &quot;tags&quot;.&quot;tag_name&quot; = ? AND (&quot;tags&quot;.&quot;id&quot; != ?) LIMIT ?[0m  [[&quot;tag_name&quot;, &quot;Yahooooe!&quot;], [&quot;id&quot;, 3], [&quot;LIMIT&quot;, 1]]
+[1m[36mPost Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM &quot;posts&quot; WHERE &quot;posts&quot;.&quot;permalink&quot; = ? LIMIT ?[0m  [[&quot;permalink&quot;, &quot;new-post-5&quot;], [&quot;LIMIT&quot;, 1]]
+[1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO &quot;posts&quot; (&quot;name&quot;, &quot;text&quot;, &quot;permalink&quot;, &quot;created_at&quot;, &quot;updated_at&quot;) VALUES (?, ?, ?, ?, ?)[0m  [[&quot;name&quot;, &quot;NewPost #5&quot;], [&quot;text&quot;, &quot;&lt;p&gt;This is my fifth post&lt;/p&gt;&quot;], [&quot;permalink&quot;, &quot;new-post-5&quot;], [&quot;created_at&quot;, 2017-04-23 06:50:54 UTC], [&quot;updated_at&quot;, 2017-04-23 06:50:54 UTC]]
+[1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO &quot;posts_tags&quot; (&quot;post_id&quot;, &quot;tag_id&quot;) VALUES (?, ?)[0m  [[&quot;post_id&quot;, 5], [&quot;tag_id&quot;, 1]]
+[1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO &quot;posts_tags&quot; (&quot;post_id&quot;, &quot;tag_id&quot;) VALUES (?, ?)[0m  [[&quot;post_id&quot;, 5], [&quot;tag_id&quot;, 2]]
+[1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO &quot;posts_tags&quot; (&quot;post_id&quot;, &quot;tag_id&quot;) VALUES (?, ?)[0m  [[&quot;post_id&quot;, 5], [&quot;tag_id&quot;, 3]]
+[1m[35m (115.1ms)[0m  [1m[36mcommit transaction[0m</pre>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>No serializer found for resource: #&lt;Tag id: 1, tag_name: “#1”&gt;</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT “likes”.* FROM “likes”
+WHERE “likes”.“post_id” = ?[0m  [[“post_id”, 5]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>Rendered <a href="../PostSerializer.html">PostSerializer</a> with
+ActiveModelSerializers::Adapter::JsonApi (58.07ms)</p>
+</dd></dl>
+
+<p>Completed 201 Created in 231ms (Views: 61.4ms | ActiveRecord: 121.9ms)</p>
+
+<p>Started GET “/home” for 127.0.0.1 at 2017-04-23 09:51:16 +0300 Processing
+by <a
+href="../PublicController.html#method-i-home">PublicController#home</a> as
+<strong>/</strong></p>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>[1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT  “posts”.* FROM “posts”
+ORDER BY created_at DESC LIMIT ?[0m  [[“LIMIT”, 4]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mPortfolioImage Load (0.3ms)[0m  [1m[34mSELECT 
+“portfolio_images”.* FROM “portfolio_images” ORDER BY created_at DESC LIMIT
+?[0m  [[“LIMIT”, 3]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>Rendered ActiveModel::Serializer::Null with Hash (10.99ms)</p>
+</dd></dl>
+
+<p>Completed 200 OK in 20ms (Views: 13.5ms | ActiveRecord: 1.6ms)</p>
+
+<p>Started GET “/home” for 127.0.0.1 at 2017-04-27 16:18:56 +0300</p>
+
+<pre>[1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT &quot;schema_migrations&quot;.* FROM &quot;schema_migrations&quot;[0m</pre>
+
+<p>Processing by <a
+href="../PublicController.html#method-i-home">PublicController#home</a> as
+<strong>/</strong></p>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>[1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT  “posts”.* FROM “posts”
+ORDER BY created_at DESC LIMIT ?[0m  [[“LIMIT”, 4]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mPortfolioImage Load (0.4ms)[0m  [1m[34mSELECT 
+“portfolio_images”.* FROM “portfolio_images” ORDER BY created_at DESC LIMIT
+?[0m  [[“LIMIT”, 3]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>Rendered ActiveModel::Serializer::Null with Hash (27.44ms)</p>
+</dd></dl>
+
+<p>Completed 200 OK in 165ms (Views: 47.8ms | ActiveRecord: 3.0ms)</p>
+
+<p>Started GET “/home” for 127.0.0.1 at 2017-04-27 16:21:01 +0300 Processing
+by <a
+href="../PublicController.html#method-i-home">PublicController#home</a> as
+<strong>/</strong></p>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>[1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT  “posts”.* FROM “posts”
+ORDER BY created_at DESC LIMIT ?[0m  [[“LIMIT”, 4]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mPortfolioImage Load (0.4ms)[0m  [1m[34mSELECT 
+“portfolio_images”.* FROM “portfolio_images” ORDER BY created_at DESC LIMIT
+?[0m  [[“LIMIT”, 3]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>Rendered ActiveModel::Serializer::Null with Hash (8.15ms)</p>
+</dd></dl>
+
+<p>Completed 200 OK in 10ms (Views: 7.7ms | ActiveRecord: 1.5ms)</p>
+
+<p>Started GET “/admin/posts” for 127.0.0.1 at 2017-04-27 16:24:44 +0300
+Processing by <a
+href="../Admin/PostsController.html#method-i-index">Admin::PostsController#index</a>
+as <strong>/</strong></p>
+
+<pre>[1m[36mPost Load (1.7ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot; ORDER BY created_at DESC[0m</pre>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>[1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT “tags”.* FROM “tags” INNER
+JOIN “posts_tags” ON “tags”.“id” = “posts_tags”.“tag_id” WHERE
+“posts_tags”.“post_id” = ?[0m  [[“post_id”, 5]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>No serializer found for resource: #&lt;Tag id: 1, tag_name: “#1”&gt;</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT “likes”.* FROM “likes”
+WHERE “likes”.“post_id” = ?[0m  [[“post_id”, 5]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT “tags”.* FROM “tags” INNER
+JOIN “posts_tags” ON “tags”.“id” = “posts_tags”.“tag_id” WHERE
+“posts_tags”.“post_id” = ?[0m  [[“post_id”, 4]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT “likes”.* FROM “likes”
+WHERE “likes”.“post_id” = ?[0m  [[“post_id”, 4]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT “tags”.* FROM “tags” INNER
+JOIN “posts_tags” ON “tags”.“id” = “posts_tags”.“tag_id” WHERE
+“posts_tags”.“post_id” = ?[0m  [[“post_id”, 3]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT “likes”.* FROM “likes”
+WHERE “likes”.“post_id” = ?[0m  [[“post_id”, 3]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT “tags”.* FROM “tags” INNER
+JOIN “posts_tags” ON “tags”.“id” = “posts_tags”.“tag_id” WHERE
+“posts_tags”.“post_id” = ?[0m  [[“post_id”, 2]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT “likes”.* FROM “likes”
+WHERE “likes”.“post_id” = ?[0m  [[“post_id”, 2]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT “tags”.* FROM “tags” INNER
+JOIN “posts_tags” ON “tags”.“id” = “posts_tags”.“tag_id” WHERE
+“posts_tags”.“post_id” = ?[0m  [[“post_id”, 1]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mLike Load (0.2ms)[0m  [1m[34mSELECT “likes”.* FROM “likes”
+WHERE “likes”.“post_id” = ?[0m  [[“post_id”, 1]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>Rendered ActiveModel::Serializer::CollectionSerializer with
+ActiveModelSerializers::Adapter::JsonApi (279.52ms)</p>
+</dd></dl>
+
+<p>Completed 200 OK in 446ms (Views: 407.3ms | ActiveRecord: 7.2ms)</p>
+
+<p>Started GET “/admini/posts” for 127.0.0.1 at 2017-04-27 16:38:06 +0300</p>
+
+<p>ActionController::RoutingError (No route matches [GET] “/admini/posts”):</p>
+
+<p>actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in
+`call&#39; actionpack (5.0.2)
+lib/action_dispatch/middleware/show_exceptions.rb:31:in `call&#39; railties
+(5.0.2) lib/rails/rack/logger.rb:36:in `call_app&#39; railties (5.0.2)
+lib/rails/rack/logger.rb:24:in `block in call&#39; activesupport (5.0.2)
+lib/active_support/tagged_logging.rb:69:in `block in tagged&#39;
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in
+`tagged&#39; activesupport (5.0.2)
+lib/active_support/tagged_logging.rb:69:in `tagged&#39; railties (5.0.2)
+lib/rails/rack/logger.rb:24:in `call&#39; actionpack (5.0.2)
+lib/action_dispatch/middleware/request_id.rb:24:in `call&#39; rack (2.0.1)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.0.2)
+lib/active_support/cache/strategy/local_cache_middleware.rb:28:in
+`call&#39; actionpack (5.0.2)
+lib/action_dispatch/middleware/executor.rb:12:in `call&#39; actionpack
+(5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call&#39; rack
+(2.0.1) lib/rack/sendfile.rb:111:in `call&#39; railties (5.0.2)
+lib/rails/engine.rb:522:in `call&#39; puma (3.8.2)
+lib/puma/configuration.rb:224:in `call&#39; puma (3.8.2)
+lib/puma/server.rb:600:in `handle_request&#39; puma (3.8.2)
+lib/puma/server.rb:435:in `process_client&#39; puma (3.8.2)
+lib/puma/server.rb:299:in `block in run&#39; puma (3.8.2)
+lib/puma/thread_pool.rb:120:in `block in spawn_thread&#39; Started GET
+“/favicon.ico” for 127.0.0.1 at 2017-04-27 16:38:08 +0300</p>
+
+<p>ActionController::RoutingError (No route matches [GET] “/favicon.ico”):</p>
+
+<p>actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in
+`call&#39; actionpack (5.0.2)
+lib/action_dispatch/middleware/show_exceptions.rb:31:in `call&#39; railties
+(5.0.2) lib/rails/rack/logger.rb:36:in `call_app&#39; railties (5.0.2)
+lib/rails/rack/logger.rb:24:in `block in call&#39; activesupport (5.0.2)
+lib/active_support/tagged_logging.rb:69:in `block in tagged&#39;
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in
+`tagged&#39; activesupport (5.0.2)
+lib/active_support/tagged_logging.rb:69:in `tagged&#39; railties (5.0.2)
+lib/rails/rack/logger.rb:24:in `call&#39; actionpack (5.0.2)
+lib/action_dispatch/middleware/request_id.rb:24:in `call&#39; rack (2.0.1)
+lib/rack/runtime.rb:22:in `call&#39; activesupport (5.0.2)
+lib/active_support/cache/strategy/local_cache_middleware.rb:28:in
+`call&#39; actionpack (5.0.2)
+lib/action_dispatch/middleware/executor.rb:12:in `call&#39; actionpack
+(5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call&#39; rack
+(2.0.1) lib/rack/sendfile.rb:111:in `call&#39; railties (5.0.2)
+lib/rails/engine.rb:522:in `call&#39; puma (3.8.2)
+lib/puma/configuration.rb:224:in `call&#39; puma (3.8.2)
+lib/puma/server.rb:600:in `handle_request&#39; puma (3.8.2)
+lib/puma/server.rb:435:in `process_client&#39; puma (3.8.2)
+lib/puma/server.rb:299:in `block in run&#39; puma (3.8.2)
+lib/puma/thread_pool.rb:120:in `block in spawn_thread&#39; Started GET
+“/admin/posts” for 127.0.0.1 at 2017-04-27 16:38:25 +0300 Processing by <a
+href="../Admin/PostsController.html#method-i-index">Admin::PostsController#index</a>
+as HTML</p>
+
+<pre>[1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT &quot;posts&quot;.* FROM &quot;posts&quot; ORDER BY created_at DESC[0m</pre>
+<dl class="rdoc-list label-list"><dt>active_model_serializers
+<dd>
+<p>[1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT “tags”.* FROM “tags” INNER
+JOIN “posts_tags” ON “tags”.“id” = “posts_tags”.“tag_id” WHERE
+“posts_tags”.“post_id” = ?[0m  [[“post_id”, 5]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>No serializer found for resource: #&lt;Tag id: 1, tag_name: “#1”&gt;</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT “likes”.* FROM “likes”
+WHERE “likes”.“post_id” = ?[0m  [[“post_id”, 5]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT “tags”.* FROM “tags” INNER
+JOIN “posts_tags” ON “tags”.“id” = “posts_tags”.“tag_id” WHERE
+“posts_tags”.“post_id” = ?[0m  [[“post_id”, 4]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT “likes”.* FROM “likes”
+WHERE “likes”.“post_id” = ?[0m  [[“post_id”, 4]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT “tags”.* FROM “tags” INNER
+JOIN “posts_tags” ON “tags”.“id” = “posts_tags”.“tag_id” WHERE
+“posts_tags”.“post_id” = ?[0m  [[“post_id”, 3]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT “likes”.* FROM “likes”
+WHERE “likes”.“post_id” = ?[0m  [[“post_id”, 3]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT “tags”.* FROM “tags” INNER
+JOIN “posts_tags” ON “tags”.“id” = “posts_tags”.“tag_id” WHERE
+“posts_tags”.“post_id” = ?[0m  [[“post_id”, 2]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT “likes”.* FROM “likes”
+WHERE “likes”.“post_id” = ?[0m  [[“post_id”, 2]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT “tags”.* FROM “tags” INNER
+JOIN “posts_tags” ON “tags”.“id” = “posts_tags”.“tag_id” WHERE
+“posts_tags”.“post_id” = ?[0m  [[“post_id”, 1]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>[1m[36mLike Load (0.3ms)[0m  [1m[34mSELECT “likes”.* FROM “likes”
+WHERE “likes”.“post_id” = ?[0m  [[“post_id”, 1]]</p>
+</dd><dt>active_model_serializers
+<dd>
+<p>Rendered ActiveModel::Serializer::CollectionSerializer with
+ActiveModelSerializers::Adapter::JsonApi (70.38ms)</p>
+</dd></dl>
+
+<p>Completed 200 OK in 74ms (Views: 69.3ms | ActiveRecord: 4.5ms)</p>
+</main>
+
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+

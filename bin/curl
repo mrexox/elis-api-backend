@@ -1,0 +1,34 @@
+function posts {
+	curl http://localhost:3000/posts
+}
+
+function post_post {
+	curl -v -X POST \
+			-H "Content-type: application/json" \
+      -H "X-Key-Inflection: snake" \
+			-d @bin/json/post.json \
+			http://localhost:3000/admin/posts
+}
+
+function post_message {
+  curl -v -X POST \
+      -H "Content-Type: application/json" \
+      -H "X-Key-Inflection: snake" \
+      -d @bin/json/message.json \
+      http://localhost:3000/messages
+}
+
+# Names with few words are sent like "few-words"
+# gem olive_branch handles it
+# the only needed thing is this header:
+# -H "X-Key-Inflection: snake" 
+
+function post_portfolio {
+  curl -v -X POST \
+      -H "Content-Type: application/json" \
+      -H "X-Key-Inflection: snake" \
+      -d @bin/json/portfolio.json \
+      http://localhost:3000/admin/portfolio
+}
+
+$1
