@@ -5,7 +5,11 @@ class PublicController < ApplicationController
   def home
     # Only 2 posts on main page
     # This is managed by client (fix if not)
-    @posts = Post.all
+    if params[:limit]
+      @posts = Post.sorted.limit(params[:limit])
+    else
+      @posts = Post.sorted
+    end
     render json: @posts, status: :ok, include: 'cover'
   end
 
@@ -32,6 +36,12 @@ class PublicController < ApplicationController
     else
       render json: @post, status: :ok
     end
+  end
+
+  # Needed for Ember. FIXME if possible
+  def show_tag
+    @tag = Tag.find(params[:id])
+    render json: @tag, status: :ok
   end
 
   def like_post

@@ -23,7 +23,8 @@ Rails.application.routes.draw do
   
   get 'blog/:permalink', to: 'public#show_post'
   put 'blog/:permalink', to: 'public#like_post'
-	get 'home', to: 'public#home'
+	get 'tags/:id', to: 'public#show_tag'
+	get 'posts', to: 'public#home'
 	get 'blog', to: 'public#blog'
 	get 'portfolio', to: 'public#portfolio'
   post 'messages', to: 'messages#create'

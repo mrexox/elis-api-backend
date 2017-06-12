@@ -2,12 +2,12 @@
 	"post": {
 		"name":"NewPost #11",
 		"text":"<p>This is my 10th post</p>",
-		"permalink":"new-post-12",
+		"permalink":"post-12",
     "image-id": 1,
 		"tags": [
-			{	"tag_name":"#7"	},
-			{ "tag_name":"sixth-post" },
-			{ "tag_name":"Yahooooewwa!" }
+			{	"tag-name":"#7"	},
+			{ "tag-name":"sixth-post" },
+			{ "tag-name":"Yahooooewwa!" }
 		]
 	}
 }
