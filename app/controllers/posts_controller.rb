@@ -1,12 +1,12 @@
 class PostsController < ApplicationController
   def index
     @posts = Post.sorted
-    render json: @posts, include: ['tags', 'cover'] # must include tags (and maybe likes)
+    render json: @posts, include: ['tags', 'cover'] 
   end
 
   def show
     @post = Post.find(params[:id])
-    rj @post
+    render json: @post, include: ['tags', 'cover']
   end
 
   # This is how POST request should look like.

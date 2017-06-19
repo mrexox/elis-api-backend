@@ -1,7 +1,7 @@
 class PortfolioController < ApplicationController
   def index
     @portfolio = PortfolioImage.all
-    render json: @portfolio, status: :ok
+    render json: @portfolio, status: :ok, include: ['image']
   end
 
   def create

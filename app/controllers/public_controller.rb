@@ -25,7 +25,7 @@ class PublicController < ApplicationController
 
   def portfolio
     @portfolio = PortfolioImage.sorted
-    render json: @portfolio, status: :ok
+    render json: @portfolio, status: :ok, include: 'image'
   end
 
   def show_post
